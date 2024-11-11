@@ -78,10 +78,7 @@ if (Deno.build.arch != "x86_64") {
 	Deno.exit(1);
 }
 
-if (!(await libExists(raylib_folder + "/lib/libraylib.a"))) {
-	await downloadBinary(currentArchive);
-	extractArchive(currentArchive);
-}
+
 
 // Determine library extension based on
 // your OS.
@@ -705,7 +702,7 @@ enum MouseCursor {
 	RESIZE_ALL = 9, // The omnidirectional resize/move cursor shape
 	NOT_ALLOWED = 10, // The operation-not-allowed shape
 }
-
+console.log(libName);
 const dylib = Deno.dlopen(libName, {
 	InitWindow: { parameters: ["i32", "i32", "buffer"], result: "void" }, // fn (width: i32, height: i32, title: &str) void
 	CloseWindow: { parameters: [], result: "void" }, // fn () void

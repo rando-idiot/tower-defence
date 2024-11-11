@@ -1,0 +1,45 @@
+# Build outputs
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+build.log
+
+# But keep run scripts executable
+!run.bat
+!run.sh
+!run.command
+
+# Deno specific
+.deno/
+deno.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# Optional: dependencies directory if you use --vendor flag
+vendor/
+
+# Build progress pipe
+/tmp/build_pipe
